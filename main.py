@@ -6,6 +6,9 @@ import os
 from colored import Fore, Back, Style
 # App functions
 from functions import create_character
+
+# Main App
+
 print("Welcome to Epicreate")
 
 # Menu function
