@@ -11,5 +11,21 @@ def menu():
 
         choice = input("Enter your choice: ")
         return choice
+    
+choice = ""
+
+while choice != "4":
+      choice = menu()
+
+      if choice == "1":
+            print(1)
+      elif choice == "2":
+            print(2)
+      elif choice == "3":
+            print(3)
+      elif choice == "4":
+            print("\nThank you for using Epicreate")
+      else:
+            print("Invalid choice. Please enter a number between 1 and 4.")
 
 print("Exiting...\n")
