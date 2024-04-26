@@ -45,7 +45,12 @@ class Character:
 # Function to create a new character
 def create_character():
     name = input("Enter character name: ")
+
     race = input("Enter character race (Human/Elf/Drawf): ")
+    while race not in ["Human", "Elf", "Drawf"]:
+        print ("Please only choose from Human, Elf or Drawf.")
+        race = input("Enter character race (Human/Elf/Drawf): ")
+
     char_class = input("Enter character class (Warrior/Mage/Rogue): ")
 
     character = Character(name, race, char_class)

@@ -31,7 +31,7 @@ while choice != "4":
       choice = main_menu()
 
       if choice == "1":
-           character_ = create_character()
+           create_character()
       elif choice == "2":
             print(2)
       elif choice == "3":
