@@ -48,10 +48,13 @@ def create_character():
 
     race = input("Enter character race (Human/Elf/Drawf): ")
     while race not in ["Human", "Elf", "Drawf"]:
-        print ("Please only choose from Human, Elf or Drawf.")
+        print ("Sorry invalid race. Please choose only from Human, Elf or Drawf.")
         race = input("Enter character race (Human/Elf/Drawf): ")
 
     char_class = input("Enter character class (Warrior/Mage/Rogue): ")
+    while char_class not in ["Warrior", "Mage", "Rogue"]:
+        print("Invalid class. Please choose from Warrior, Mage, or Rogue.")
+        char_class = input("Enter character class (Warrior/Mage/Rogue): ")
 
     character = Character(name, race, char_class)
     character.display_details()
