@@ -5,7 +5,7 @@ import os
 # External Packages
 
 # App functions
-
+from New_char import create_character
 # Main App
 
 print("Welcome to Epicreate")

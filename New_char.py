@@ -30,6 +30,17 @@ class Character:
             self.abilities["Backstab"] = "Sneak behind enemies and deal extra damage"
             self.abilities["Stealth"] = "Become invisible temporarily"
 
+    def display_details(self):
+        print(f"Name: {self.name}")
+        print(f"Race: {self.race}")
+        print(f"Class: {self.char_class}")
+        print("Attributes:")
+        for attr, value in self.attributes.items():
+            print(f"- {attr}: {value}")
+        print("Abilities:")
+        for ability, description in self.abilities.items():
+            print(f"- {ability}: {description}")
+
 
 # Function to create a new character
 def create_character():
@@ -38,3 +49,4 @@ def create_character():
     char_class = input("Enter character class (Warrior/Mage/Rogue): ")
 
     character = Character(name, race, char_class)
+    character.display_details()
