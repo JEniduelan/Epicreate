@@ -3,16 +3,15 @@ import csv
 import os
 
 # External Packages
-from colored import Fore, Back, Style
+
 # App functions
-from functions import create_character
 
 # Main App
 
 print("Welcome to Epicreate")
 
 # Menu function
-def menu():
+def main_menu():
     while True:
         print("\nMain Menu:")
         print("> Enter 1 to create a character ")
@@ -29,7 +28,7 @@ csv_file = "Characters.csv"
 choice = ""
 
 while choice != "4":
-      choice = menu()
+      choice = main_menu()
 
       if choice == "1":
            character_ = create_character()
@@ -38,8 +37,8 @@ while choice != "4":
       elif choice == "3":
             print(3)
       elif choice == "4":
-            print("\nThank you for using Epicreate")
+            print("\nThank you for using Epicreate!")
       else:
-            print("Invalid choice. Please enter a number between 1 and 4.")
+            print("Please only enter a number between 1 - 4. Thank you")
 
-print("Exiting...\n")
+print("Goodbye...\n")
