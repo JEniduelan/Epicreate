@@ -1,11 +1,11 @@
-
+from csv_function import add_char
 # Character dictionary
 class Character:
 
     class_attributes = {
-        "Warrior": {"Strength": 10, "Dexterity": 5, "Intelligence": 3},
-        "Mage": {"Strength": 3, "Dexterity": 5, "Intelligence": 10},
-        "Rogue": {"Strength": 5, "Dexterity": 10, "Intelligence": 5}
+        "Warrior": {"Str": 10, "Dex": 5, "Int": 3},
+        "Mage": {"Str": 3, "Dex": 5, "Int": 10},
+        "Rogue": {"Str": 5, "Dex": 10, "Int": 5}
     }
 
     def __init__(self, name, race, char_class):
@@ -58,3 +58,4 @@ def new_Char():
 
     character = Character(name, race, char_class)
     character.display_details()
+    add_char(character)
