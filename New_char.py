@@ -43,7 +43,7 @@ class Character:
 
 
 # Function to create a new character
-def create_character():
+def new_Char():
     name = input("Enter character name: ")
 
     race = input("Enter character race (Human/Elf/Drawf): ")

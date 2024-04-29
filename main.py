@@ -5,7 +5,7 @@ import os
 # External Packages
 
 # App functions
-from New_char import create_character
+from New_char import new_Char
 # Main App
 
 print("Welcome to Epicreate")
@@ -23,15 +23,13 @@ def main_menu():
         return choice
 
 
-csv_file = "Characters.csv"
-
 choice = ""
 
 while choice != "4":
       choice = main_menu()
 
       if choice == "1":
-           create_character()
+           new_Char()
       elif choice == "2":
             print(2)
       elif choice == "3":
