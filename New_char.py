@@ -41,21 +41,26 @@ class Character:
         for ability, description in self.abilities.items():
             print(f"- {ability}: {description}")
 
+#  ---------- Create Character Feature ----------
 
 # Function to create a new character
 def new_Char():
+    # Prompt the user to enter character details
     name = input("Enter character name: ")
-
     race = input("Enter character race (Human/Elf/Drawf): ")
+    # Validate the entered race
     while race not in ["Human", "Elf", "Drawf"]:
         print ("Sorry invalid race. Please choose only from Human, Elf or Drawf.")
         race = input("Enter character race (Human/Elf/Drawf): ")
 
     char_class = input("Enter character class (Warrior/Mage/Rogue): ")
+    # Validate the entered class
     while char_class not in ["Warrior", "Mage", "Rogue"]:
         print("Invalid class. Please choose from Warrior, Mage, or Rogue.")
         char_class = input("Enter character class (Warrior/Mage/Rogue): ")
-
+    # Create a Character object with the entered details
     character = Character(name, race, char_class)
+    # Display character details
     character.display_details()
+    # Add character to CSV file
     add_char(character)
