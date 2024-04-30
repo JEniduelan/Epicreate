@@ -35,16 +35,26 @@ def remove_Char():
         characters = list(reader)
 
     if not characters:
-        print("No characters found. Please create a character")
+        print("No characters found! Please create a character first")
         return
     
     print("\nHere are the list of your characters\n")
     for Char_num, character in enumerate(characters, start=1):
         print(f"{Char_num}. {character['Name']} - {character['Race']} - {character['Class']}")
 
+    try:
+        Char_num = int(input("\nEnter the number of the character you wish to remove: "))
+        if Char_num < 1 or Char_num > len(characters):
+            print("Invalid index number.")
+            return
+        
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        return
+
     removed_char = characters.pop(Char_num - 1)
-    with open("characters.csv", "w", newline="") as file:
-        writer = csv.DictWriter(file, fieldnames=removed_char.keys())
+    with open(Character_list, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=removed_char.keys())
         writer.writeheader()
         writer.writerows(characters)
 
