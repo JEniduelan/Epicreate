@@ -25,8 +25,8 @@ def add_char(character):
     print("Character created successfully")
 
 
-# def remove_Char():
-#     if (not os.path.isfile(Character_list))
+def remove_Char():
+    if (not os.path.isfile(Character_list))
 
 
 
