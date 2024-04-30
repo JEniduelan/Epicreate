@@ -4,16 +4,24 @@ import os.path
 Character_list = "characters.csv"
 
 #  ---------- Add Character Feature ----------
+
+# Function to add a character
 def add_char(character):
+    # Define the header for the CSV file
     Header = ["Name", "Race", "Class", "Attributes", "Abilities"]
+    # Check if the CSV file already exists
     file_exists = os.path.isfile(Character_list)
 
+    # Open the CSV file in append mode
     with open(Character_list, "a", newline="") as f:
+        # Create a CSV writer object
         writer = csv.DictWriter(f, Header)
 
+        # If the file doesn't exist, write the header
         if not file_exists:
             writer.writeheader()
 
+        # Write a new row to the CSV file with character details
         writer.writerow({
             "Name": character.name,
             "Race": character.race,
@@ -21,7 +29,7 @@ def add_char(character):
             "Attributes": character.attributes,
             "Abilities": character.abilities
          })
-        
+    # Print a success message 
     print("\nCharacter created successfully")
 
 # ---------- Remove Character Feature ----------
@@ -36,7 +44,7 @@ def remove_Char():
     with open(Character_list, "r", newline="") as f:
         reader = csv.DictReader(f)
         characters = list(reader)
-    # Check if there are any characters in the list
+    # Check if there are any characters in the list then print
     if not characters:
         print("No characters found! Please create a character first")
         return

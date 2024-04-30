@@ -1,25 +1,36 @@
-from csv_function import add_char
-# Character dictionary
-class Character:
 
+# App functions
+from csv_function import add_char
+
+#  ---------- Create Character Feature ----------
+class Character:
+    # Class attribute defining attributes for each character class
     class_attributes = {
         "Warrior": {"Str": 10, "Dex": 5, "Int": 3},
         "Mage": {"Str": 3, "Dex": 5, "Int": 10},
         "Rogue": {"Str": 5, "Dex": 10, "Int": 5}
     }
 
+    # Constructor method to initialize a character object
     def __init__(self, name, race, char_class):
         self.name = name
         self.race = race
         self.char_class = char_class
-        self.attributes = self.assign_attributes()
+        # Assign attributes based on class
+        self.attributes = self.assign_attributes() 
+        # Empty dictionary for abilities
         self.abilities = {}
+        # Assign abilities based on class
         self.assign_abilities()
 
+    # Method to assign attributes based on character class
     def assign_attributes(self):
+        # Retrieve attributes from class_attributes dictionary
         return self.class_attributes.get(self.char_class, {})
     
+    # Method to assign abilities based on character class
     def assign_abilities(self):
+        # Assign abilities based on character class
         if self.char_class == "Warrior":
             self.abilities["Taunt"] = "Make nearby enemies to attack you"
             self.abilities["Berserker Rage"] = "Makes the user deal additional damage and reduce incoming damage"
@@ -30,7 +41,9 @@ class Character:
             self.abilities["Backstab"] = "Sneak behind enemies and deal extra damage"
             self.abilities["Stealth"] = "Become invisible temporarily"
 
+    # Method to display character details
     def display_details(self):
+        # Print character details
         print(f"Name: {self.name}")
         print(f"Race: {self.race}")
         print(f"Class: {self.char_class}")
@@ -40,8 +53,6 @@ class Character:
         print("Abilities:")
         for ability, description in self.abilities.items():
             print(f"- {ability}: {description}")
-
-#  ---------- Create Character Feature ----------
 
 # Function to create a new character
 def new_Char():
