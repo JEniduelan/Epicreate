@@ -20,7 +20,7 @@ def main_menu():
         print("> Enter 3 to view created character ")
         print("> Enter 4 to exit ")
 
-        choice = input("Enter your choice: ")
+        choice = input("\nEnter your choice: ")
         return choice
 
 

@@ -27,8 +27,30 @@ def add_char(character):
 
 def remove_Char():
     if (not os.path.isfile(Character_list)):
-        print("You have not created any characters yet!")
+        print("\nYou have not created any characters yet!")
         return
+    
+    with open(Character_list, "r", newline="") as f:
+        reader = csv.DictReader(f)
+        characters = list(reader)
+
+    if not characters:
+        print("No characters found. Please create a character")
+        return
+    
+    print("\nHere are the list of your characters\n")
+    for Char_num, character in enumerate(characters, start=1):
+        print(f"{Char_num}. {character['Name']} - {character['Race']} - {character['Class']}")
+
+    removed_char = characters.pop(Char_num - 1)
+    with open("characters.csv", "w", newline="") as file:
+        writer = csv.DictWriter(file, fieldnames=removed_char.keys())
+        writer.writeheader()
+        writer.writerows(characters)
+
+    print(f"\nYour character '{removed_char["Name"]}' has been removed.")
+
+
 
 
 
