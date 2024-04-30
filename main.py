@@ -6,11 +6,13 @@ import csv
 # App functions
 from New_char import new_Char
 from csv_function import remove_Char, view_Char
-# Main App
 
+# ---------- Main Application ----------
+
+# ---------- Application title ----------
 print("\nWelcome to Epicreate")
 
-# Menu function
+# ---------- Main menu ----------
 def main_menu():
     while True:
         print("\nMain Menu:")
@@ -24,7 +26,7 @@ def main_menu():
 
 
 
-# Main logic of the main menu
+# ---------- Logic of menu ----------
 choice = ""
 while choice != "4":
       choice = main_menu()
