@@ -5,7 +5,7 @@ import csv
 
 # App functions
 from New_char import new_Char
-from csv_function import remove_Char
+from csv_function import remove_Char, view_Char
 # Main App
 
 print("\nWelcome to Epicreate")

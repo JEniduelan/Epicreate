@@ -3,7 +3,7 @@ import os.path
 
 Character_list = "characters.csv"
 
-# Add character function to csv file
+#  ---------- Add Character Feature ----------
 def add_char(character):
     Header = ["Name", "Race", "Class", "Attributes", "Abilities"]
     file_exists = os.path.isfile(Character_list)
@@ -22,9 +22,9 @@ def add_char(character):
             "Abilities": character.abilities
          })
         
-    print("Character created successfully")
+    print("\nCharacter created successfully")
 
-
+# ---------- Remove Character Feature ----------
 def remove_Char():
     if (not os.path.isfile(Character_list)):
         print("\nYou have not created any characters yet!")
@@ -60,6 +60,20 @@ def remove_Char():
 
     print(f"\nYour character '{removed_char["Name"]}' has been removed.")
 
+# ---------- View Character Feature ----------
+def view_Char():
+    try:
+        with open(Character_list,"r") as f:
+            reader = csv.DictReader(f)
+            if not reader.fieldnames:
+                print("\nSorry, There are no characters found.")
+                return
+            
+            for row in reader:
+                print(row)
+
+    except FileNotFoundError:
+        print("\nPlease create a character first before continuing")
 
 
 
