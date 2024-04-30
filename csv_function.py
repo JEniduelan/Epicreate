@@ -1,13 +1,14 @@
 import csv
 import os.path
 
+Character_list = "characters.csv"
 
 # Add character function to csv file
 def add_char(character):
     Header = ["Name", "Race", "Class", "Attributes", "Abilities"]
-    file_exists = os.path.isfile("characters.csv")
+    file_exists = os.path.isfile(Character_list)
 
-    with open("characters.csv", "a", newline="") as f:
+    with open(Character_list, "a", newline="") as f:
         writer = csv.DictWriter(f, Header)
 
         if not file_exists:
@@ -24,7 +25,10 @@ def add_char(character):
     print("Character created successfully")
 
 
+# def remove_Char():
+#     if (not os.path.isfile(Character_list))
+
+
+
+
     
-
-
-

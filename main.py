@@ -8,7 +8,7 @@ import os
 from New_char import new_Char
 # Main App
 
-print("Welcome to Epicreate")
+print("\nWelcome to Epicreate")
 
 # Menu function
 def main_menu():
@@ -23,17 +23,18 @@ def main_menu():
         return choice
 
 
-choice = ""
 
+# Main logic of the main menu
+choice = ""
 while choice != "4":
       choice = main_menu()
 
       if choice == "1":
            new_Char()
       elif choice == "2":
-            print(2)
+            remove_Char()
       elif choice == "3":
-            print(3)
+            view_Char()
       elif choice == "4":
             print("\nThank you for using Epicreate!")
       else:
