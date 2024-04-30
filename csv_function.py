@@ -26,7 +26,9 @@ def add_char(character):
 
 
 def remove_Char():
-    if (not os.path.isfile(Character_list))
+    if (not os.path.isfile(Character_list)):
+        print("You have not created any characters yet!")
+        return
 
 
 
