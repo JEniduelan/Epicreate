@@ -50,7 +50,7 @@ def remove_Char():
         characters = list(reader)
     # Check if there are any characters in the list then print
     if not characters:
-        print("No characters found! Please create a character first")
+        print("\nNo characters found! Please create a character first")
         return
     # Display the list of characters
     print("\nHere are the list of your characters\n")
