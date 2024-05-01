@@ -63,7 +63,7 @@ def remove_Char():
         return
     # Create a rich Table
     table = Table(show_header=True, header_style="bold magenta")
-    table.add_column("Index", style="cyan")
+    table.add_column("CharNum", style="cyan")
     table.add_column("Name", style="green")
     table.add_column("Race", style="blue")
     table.add_column("Class", style="yellow")
@@ -110,7 +110,7 @@ def remove_Char():
 
 # ---------- View Character Feature ----------
 
-def view_Char(main_menu):
+def view_Char():
     try:
         # Attempt to open the CSV file for reading
         with open(Character_list, "r", newline="") as f:

@@ -1,4 +1,7 @@
 
+from rich.console import Console
+from rich.table import Table
+
 # App functions
 from csv_function import add_char
 
@@ -7,7 +10,7 @@ class Character:
     # Class attribute defining attributes for each character class
     class_attributes = {
         "Warrior": {"Str": 10, "Dex": 5, "Int": 3},
-        "Mage": {"Str": 3, "Dex": 5, "Int": 10},
+        "Mage": {"Str ":3, "Dex ": 5, "Int ": 10},
         "Rogue": {"Str": 5, "Dex": 10, "Int": 5}
     }
 
@@ -43,16 +46,30 @@ class Character:
 
     # Method to display character details
     def display_details(self):
-        # Print character details
-        print(f"Name: {self.name}")
-        print(f"Race: {self.race}")
-        print(f"Class: {self.char_class}")
-        print("Attributes:")
-        for attr, value in self.attributes.items():
-            print(f"- {attr}: {value}")
-        print("Abilities:")
-        for ability, description in self.abilities.items():
-            print(f"- {ability}: {description}")
+        # Create a rich Table
+        table = Table(show_header=True, header_style="bold magenta")
+        table.add_column("Category", style="cyan", width=15)
+        table.add_column("Detail", style="green")
+
+        # Add character details to the table
+        table.add_row("Name:", self.name, style="red")
+        table.add_row("Race:", self.race)
+        table.add_row("Class:", self.char_class)
+
+        # Add a separator row
+        table.add_row(" ", " ")
+
+        # Add attributes to the table
+        attributes_text = "\n".join([f"{attr}: {value}" for attr, value in self.attributes.items()])
+        table.add_row("Attributes:", attributes_text)
+
+        # Add abilities to the table
+        abilities_text = "\n".join([f"{ability}: {description}" for ability, description in self.abilities.items()])
+        table.add_row("Abilities:", abilities_text)
+        
+        # Print the table
+        console = Console()
+        console.print(table)
 
 # Function to create a new character
 def new_Char():
