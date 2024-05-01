@@ -4,6 +4,10 @@ import csv
 import os.path
 import ast
 
+from rich.console import Console
+from rich.table import Table
+
+
 Character_list = "characters.csv"
 
 #  ---------- Add Character Feature ----------
@@ -35,6 +39,12 @@ def add_char(character):
     # Print a success message 
     print("\nCharacter created successfully")
 
+    while True:
+            user_input = input("\nPress Enter to continue...")
+            if user_input == "":
+                    break
+    
+
 # ---------- Remove Character Feature ----------
 
 # Function to remove a character
@@ -51,10 +61,26 @@ def remove_Char():
     if not characters:
         print("\nNo characters found! Please create a character first")
         return
-    # Display the list of characters
-    print("\nHere are the list of your characters\n")
-    for Char_num, character in enumerate(characters, start=1):
-        print(f"{Char_num}. {character['Name']} - {character['Race']} - {character['Class']}")
+    # Create a rich Table
+    table = Table(show_header=True, header_style="bold magenta")
+    table.add_column("Index", style="cyan")
+    table.add_column("Name", style="green")
+    table.add_column("Race", style="blue")
+    table.add_column("Class", style="yellow")
+
+    # Add rows to the table
+    for Char, character in enumerate(characters, start=1):
+        table.add_row(
+            str(Char),
+            character['Name'],
+            character['Race'],
+            character['Class']
+        )
+
+    # Print the table
+    console = Console()
+    console.print("\nHere are the list of your characters\n")
+    console.print(table)
 
     try:
         # Prompt the user to select a character to remove
@@ -76,9 +102,15 @@ def remove_Char():
     # Print confirmation message
     print(f"\nYour character '{removed_char["Name"]}' has been removed.")
 
+    while True:
+            user_input = input("\nPress Enter to continue...")
+            if user_input == "":
+                    break
+
+
 # ---------- View Character Feature ----------
 
-def view_Char():
+def view_Char(main_menu):
     try:
         # Attempt to open the CSV file for reading
         with open(Character_list, "r", newline="") as f:
@@ -88,24 +120,37 @@ def view_Char():
             if not rows:
                 print("\nSorry, There are no characters found.")
                 return
-            #prints out characters in column
+            
+            # Create a rich Table
+            table = Table(show_header=True, header_style="bold magenta")
+            table.add_column("Name", style="cyan")
+            table.add_column("Race", style="green")
+            table.add_column("Class", style="blue")
+            table.add_column("Attributes", style="yellow")
+            table.add_column("Abilities", style="red")
+            
+            # Add rows to the table
             for row in rows:
-                print("\nName: {}".format(row["Name"]))
-                print("Race: {}".format(row["Race"]))
-                print("Class: {}".format(row["Class"]))
-                print("Attributes:")
-                # Iterate over each attribute and print it
                 attributes = ast.literal_eval(row["Attributes"])
-                # Iterate over each attribute and print it
-                for key, value in attributes.items():
-                    print("  {}: {}".format(key, value))
-                print("Abilities:")
-                # Parse the "Abilities" field as a dictionary
                 abilities = ast.literal_eval(row["Abilities"])
-                # Iterate over each ability and print it
-                for key, value in abilities.items():
-                    print("  {}: {}".format(key, value))
+                table.add_row(
+                    row["Name"], 
+                    row["Race"], 
+                    row["Class"], 
+                    "\n".join([f"{key}: {value}" for key, value in attributes.items()]), 
+                    "\n".join([f"{key}: {value}" for key, value in abilities.items()])
+                )
+            
+            # Print the table
+            console = Console()
+            console.print(table)
+
+        while True:
+            user_input = input("\nPress Enter to continue...")
+            if user_input == "":
+                    break
+            
+        
                     
     except FileNotFoundError:
         print("\nPlease create a character first before viewing.")
-

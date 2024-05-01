@@ -3,7 +3,7 @@ import csv
 
 # External Packages
 from colored import Fore, Back, Style
-from rich import emoji
+from rich import emoji, print
 # App functions
 from New_char import new_Char
 from csv_function import remove_Char, view_Char
@@ -36,7 +36,7 @@ choice = ""
 while choice != "4":
       choice = main_menu()
 
-      # Call the function to create a new character
+      # Call the function to create a new character and automatically added in csv file
       if choice == "1":
            new_Char()
       # Call the function to remove a character
@@ -54,17 +54,3 @@ while choice != "4":
 
 # Exit message
 print("Goodbye...\n")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
