@@ -1,9 +1,8 @@
 
-
-
 # App functions
 import csv
 import os.path
+import ast
 
 Character_list = "characters.csv"
 
@@ -79,19 +78,34 @@ def remove_Char():
 
 # ---------- View Character Feature ----------
 
-# Function to view characters stored in the CSV file
 def view_Char():
     try:
-        # Attempts to open the CSV file and read character data
-        with open(Character_list,"r") as f:
+        # Attempt to open the CSV file for reading
+        with open(Character_list, "r", newline="") as f:
+            # Create a CSV reader object
             reader = csv.DictReader(f)
-            # Checks if the file is empty or characters exist, and prints them
-            if not reader.fieldnames:
+            rows = list(reader)
+            if not rows:
                 print("\nSorry, There are no characters found.")
                 return
             
-            for row in reader:
-                print(row)
-    # Handles FileNotFoundError if the file does not exist
+            for row in rows:
+                print("\nName: {}".format(row["Name"]))
+                print("Race: {}".format(row["Race"]))
+                print("Class: {}".format(row["Class"]))
+                print("Attributes:")
+                # Iterate over each attribute and print it
+                attributes = ast.literal_eval(row["Attributes"])
+                # Iterate over each attribute and print it
+                for key, value in attributes.items():
+                    print("  {}: {}".format(key, value))
+                print("Abilities:")
+                # Parse the "Abilities" field as a dictionary
+                abilities = ast.literal_eval(row["Abilities"])
+                # Iterate over each ability and print it
+                for key, value in abilities.items():
+                    print("  {}: {}".format(key, value))
+                    
     except FileNotFoundError:
-        print("\nPlease create a character first before continuing")
+        print("\nPlease create a character first before viewing.")
+

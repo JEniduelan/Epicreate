@@ -28,7 +28,7 @@ def main_menu():
 
 
 
-# ---------- Implements the main logic of the application ----------
+# ---------- Implementation of the main logic of the application ----------
 
 choice = ""
 
@@ -50,7 +50,21 @@ while choice != "4":
             print("\nThank you for using Epicreate!")
       # Handle invalid input
       else:
-            print("Please only enter a number between 1 - 4. Thank you")
+            print("\nPlease only enter a number between 1 - 4. Thank you")
 
 # Exit message
 print("Goodbye...\n")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
