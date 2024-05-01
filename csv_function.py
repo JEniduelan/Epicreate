@@ -93,7 +93,7 @@ def view_Char():
                 print("\nName: {}".format(row["Name"]))
                 print("Race: {}".format(row["Race"]))
                 print("Class: {}".format(row["Class"]))
-                print("\nAttributes:")
+                print("Attributes:")
                 # Iterate over each attribute and print it
                 attributes = ast.literal_eval(row["Attributes"])
                 # Iterate over each attribute and print it
