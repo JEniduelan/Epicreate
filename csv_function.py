@@ -95,9 +95,3 @@ def view_Char():
     # Handles FileNotFoundError if the file does not exist
     except FileNotFoundError:
         print("\nPlease create a character first before continuing")
-
-
-
-
-
-    

@@ -2,7 +2,8 @@
 import csv
 
 # External Packages
-
+from colored import Fore, Back, Style
+from rich import emoji
 # App functions
 from New_char import new_Char
 from csv_function import remove_Char, view_Char
