@@ -63,7 +63,7 @@ def remove_Char():
         return
     # Create a rich Table
     table = Table(show_header=True, header_style="bold magenta")
-    table.add_column("CharNum", style="cyan")
+    table.add_column("Character Number", style="cyan")
     table.add_column("Name", style="green")
     table.add_column("Race", style="blue")
     table.add_column("Class", style="yellow")
@@ -90,8 +90,8 @@ def remove_Char():
             return
         
     except ValueError:
-        print("Invalid input. Please enter a number.")
-        return
+        print("\nInvalid input. Please enter the character number.")
+        return remove_Char()
     # Remove the selected character from the list
     removed_char = characters.pop(Char_num - 1)
     # Write the updated list of characters back to the CSV file

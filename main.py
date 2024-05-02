@@ -1,23 +1,27 @@
-# System Packages
-import csv
-
 # External Packages
 from colored import Fore, Back, Style
 from rich import emoji, print
+
 # App functions
 from New_char import new_Char
 from csv_function import remove_Char, view_Char
 
 # ---------- Main Application ----------
 
-# ---------- Application title ----------
+
 print("\nWelcome to Epicreate")
+print("RPG Character creation system application")
+
+while True:
+            user_input = input("\nPress Enter to continue...")
+            if user_input == "":
+                    break
 
 # ---------- Main menu ----------
 def main_menu():
     # Display the main menu and get user input
     while True:
-        print("\nMain Menu:")
+        print("\n----------Main Menu----------\n")
         print("> Enter 1 to create a character ")
         print("> Enter 2 to delete created character ")
         print("> Enter 3 to view created character ")
