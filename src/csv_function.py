@@ -121,7 +121,7 @@ def view_Char():
             reader = csv.DictReader(f)
             rows = list(reader)
             if not rows:
-                print(f"\n{Fore.yellow}Sorry, There are no characters found.{Style.reset}")
+                print(f"\n🚨{Fore.red}Sorry, There are no characters found.{Style.reset}🚨")
                 return
             
             # Create a rich Table
@@ -156,4 +156,4 @@ def view_Char():
         
                     
     except FileNotFoundError:
-        print(f"\n{Fore.yellow}Please create a character first before viewing.{Style.reset}")
+        print(f"\n🚨{Fore.red}Please create a character first before viewing.{Style.reset}🚨")
