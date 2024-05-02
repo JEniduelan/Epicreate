@@ -9,8 +9,8 @@ from csv_function import remove_Char, view_Char
 # ---------- Main Application ----------
 
 
-print("\nWelcome to Epicreate")
-print("RPG Character creation system application")
+print("\nWelcome to Epicreate\n")
+print("A RPG Character Creation System Application")
 
 while True:
             user_input = input("\nPress Enter to continue...")
