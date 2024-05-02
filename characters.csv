@@ -1,6 +1,2 @@
 Name,Race,Class,Attributes,Abilities
-eric,Elf,Rogue,"{'Str': 5, 'Dex': 10, 'Int': 5}","{'Backstab': 'Sneak behind enemies and deal extra damage', 'Stealth': 'Become invisible temporarily'}"
-john,Elf,Rogue,"{'Str': 5, 'Dex': 10, 'Int': 5}","{'Backstab': 'Sneak behind enemies and deal extra damage', 'Stealth': 'Become invisible temporarily'}"
-eq,Elf,Rogue,"{'Str': 5, 'Dex': 10, 'Int': 5}","{'Backstab': 'Sneak behind enemies and deal extra damage', 'Stealth': 'Become invisible temporarily'}"
-qwe,Elf,Warrior,"{'Str': 10, 'Dex': 5, 'Int': 3}","{'Taunt': 'Make nearby enemies to attack you', 'Berserker Rage': 'Makes the user deal additional damage and reduce incoming damage'}"
-poa,Drawf,Warrior,"{'Str': 10, 'Dex': 5, 'Int': 3}","{'Taunt': 'Make nearby enemies to attack you', 'Berserker Rage': 'Makes the user deal additional damage and reduce incoming damage'}"
+eric,Elf,Mage,"{'Str ': 3, 'Dex ': 5, 'Int ': 10}","{'Fireball': 'Launch a ball of fire at enemies', 'Teleport': 'Instantly teleport short distances'}"

@@ -1,3 +1,5 @@
+from colored import Fore, Back, Style
+from rich import emoji
 
 from rich.console import Console
 from rich.table import Table
@@ -74,18 +76,20 @@ class Character:
 # Function to create a new character
 def new_Char():
     # Prompt the user to enter character details
-    name = input("Enter character name: ")
-    race = input("Enter character race (👨‍🦰 Human/🧝‍♂️ Elf/🧔🏼 Drawf): ")
+    name = input(f"Enter character's name: ")
+    race = input(f"Enter character's race (👨 {Fore.yellow}Human{Style.reset} 🧝 {Fore.blue}Elf{Style.reset} 🧔 {Fore.green}Drawf{Style.reset}): ")
     # Validate the entered race
     while race not in ["Human", "Elf", "Drawf"]:
-        print ("Sorry invalid race. Please choose only from Human, Elf or Drawf.")
-        race = input("\nEnter character race (👨‍🦰 Human/🧝‍♂️ Elf/🧔🏼 Drawf): ")
+        print(f"\n🚨{Back.red}Sorry invalid race{Style.reset}🚨")
+        print(f"🚨Please choose only from {Fore.yellow}Human{Style.reset}, {Fore.blue}Elf{Style.reset} or {Fore.green}Drawf{Style.reset} 🚨")
+        race = input(f"\nEnter character's race (👨 {Fore.yellow}Human{Style.reset} 🧝 {Fore.blue}Elf{Style.reset} 🧔 {Fore.green}Drawf{Style.reset}): ")
 
-    char_class = input("Enter character class (🛡️ Warrior/🧙Mage/🗡️ Rogue): ")
+    char_class = input(f"Enter character's class (🛡️ {Fore.red}Warrior{Style.reset} 🧙{Fore.blue}Mage{Style.reset} 🗡️ {Fore.cyan}Rogue{Style.reset}): ")
     # Validate the entered class
     while char_class not in ["Warrior", "Mage", "Rogue"]:
-        print("Invalid class. Please choose from Warrior, Mage, or Rogue.")
-        char_class = input("Enter character class (🛡️ Warrior/🧙Mage/🗡️ Rogue): ")
+        print(f"\n🚨{Back.red}Invalid class{Style.reset}🚨")
+        print(f"Please choose from {Fore.red}Warrior{Style.reset}, {Fore.blue}Mage{Style.reset}, or {Fore.cyan}Rogue{Style.reset}.")
+        char_class = input(f"\nEnter character's class (🛡️ {Fore.red}Warrior{Style.reset} 🧙{Fore.blue}Mage{Style.reset} 🗡️ {Fore.cyan}Rogue{Style.reset}): ")
     # Create a Character object with the entered details
     character = Character(name, race, char_class)
     # Display character details
