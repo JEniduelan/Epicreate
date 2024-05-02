@@ -1,0 +1,2 @@
+Name,Race,Class,Attributes,Abilities
+Eric,Human,Warrior,"{'Str': 10, 'Dex': 5, 'Int': 3}","{'Taunt': 'Make nearby enemies to attack you', 'Berserker Rage': 'Makes the user deal additional damage and reduce incoming damage'}"

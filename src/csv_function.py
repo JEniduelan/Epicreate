@@ -87,7 +87,7 @@ def remove_Char():
         Char_num = int(input("\nEnter the number of the character you wish to remove: "))
         if Char_num < 1 or Char_num > len(characters):
             print("Invalid index number.")
-            return
+            return remove_Char()
         
     except ValueError:
         print("\nInvalid input. Please enter the character number.")
