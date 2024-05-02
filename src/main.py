@@ -27,7 +27,7 @@ def main_menu():
         print(f"▶ Enter {Fore.aquamarine_1b}3{Style.reset} to {Fore.aquamarine_1b}View{Style.reset} created character ")
         print(f"▶ Enter {Fore.green}4{Style.reset} to {Fore.green}Exit{Style.reset} the application ")
 
-        choice = input(f"{Fore.light_cyan}\nEnter your choice: {Style.reset}")
+        choice = input("\nEnter your choice: ")
         return choice
 
 

@@ -4,6 +4,7 @@ import csv
 import os.path
 import ast
 
+from colored import Fore, Back, Style
 from rich.console import Console
 from rich.table import Table
 
@@ -37,10 +38,10 @@ def add_char(character):
             "Abilities": character.abilities
          })
     # Print a success message 
-    print("\nCharacter created successfully")
+    print(f"\n{Fore.yellow}You have successfully created your character!{Style.reset} ✅")
 
     while True:
-            user_input = input("\nPress Enter to continue...")
+            user_input = input(f"{Fore.light_cyan}\nPress Enter to continue...{Style.reset}")
             if user_input == "":
                     break
     
@@ -51,7 +52,7 @@ def add_char(character):
 def remove_Char():
     # Check if the CSV file exists
     if (not os.path.isfile(Character_list)):
-        print("\nYou have not created any characters yet!")
+        print(f"\n🚨{Fore.red}You have not created any characters yet!{Style.reset}🚨")
         return
     # Read character data from the CSV file
     with open(Character_list, "r", newline="") as f:
@@ -59,7 +60,8 @@ def remove_Char():
         characters = list(reader)
     # Check if there are any characters in the list then print
     if not characters:
-        print("\nNo characters found! Please create a character first")
+        print(f"\n🚨{Back.red}No characters found!{Style.reset}🚨")
+        print(f"{Fore.yellow}Please create a character first{Style.reset}\n")
         return
     # Create a rich Table
     table = Table(show_header=True, header_style="bold magenta")
@@ -79,18 +81,19 @@ def remove_Char():
 
     # Print the table
     console = Console()
-    console.print("\nHere are the list of your characters\n")
+    console.print("\nHere are the list of your characters\n",style="yellow")
     console.print(table)
 
     try:
         # Prompt the user to select a character to remove
-        Char_num = int(input("\nEnter the number of the character you wish to remove: "))
+        Char_num = int(input(f"\nEnter the number of the character you wish to {Fore.red}remove{Style.reset}: "))
         if Char_num < 1 or Char_num > len(characters):
-            print("\nInvalid index number.")
+            print(f"\n🚨{Fore.yellow}Please enter the character number{Style.reset}🚨")
             return remove_Char()
         
     except ValueError:
-        print("\nInvalid input. Please enter the character number.")
+        print(f"\n🚨{Back.red}Invalid input{Style.reset}🚨")
+        print(f"{Fore.yellow}Please enter the character number!{Style.reset}\n")
         return remove_Char()
     # Remove the selected character from the list
     removed_char = characters.pop(Char_num - 1)
@@ -100,10 +103,10 @@ def remove_Char():
         writer.writeheader()
         writer.writerows(characters)
     # Print confirmation message
-    print(f"\nYour character '{removed_char["Name"]}' has been removed.")
+    print(f"\n{Fore.yellow}Your character '{removed_char["Name"]}' has been removed{Style.reset} ✅")
 
     while True:
-            user_input = input("\nPress Enter to continue...")
+            user_input = input(f"{Fore.light_cyan}\nPress Enter to continue...{Style.reset}")
             if user_input == "":
                     break
 
@@ -118,7 +121,7 @@ def view_Char():
             reader = csv.DictReader(f)
             rows = list(reader)
             if not rows:
-                print("\nSorry, There are no characters found.")
+                print(f"\n{Fore.yellow}Sorry, There are no characters found.{Style.reset}")
                 return
             
             # Create a rich Table
@@ -146,11 +149,11 @@ def view_Char():
             console.print(table)
 
         while True:
-            user_input = input("\nPress Enter to continue...")
+            user_input = input(f"{Fore.light_cyan}\nPress Enter to continue...{Style.reset}")
             if user_input == "":
                     break
             
         
                     
     except FileNotFoundError:
-        print("\nPlease create a character first before viewing.")
+        print(f"\n{Fore.yellow}Please create a character first before viewing.{Style.reset}")

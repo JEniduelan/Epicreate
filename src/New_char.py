@@ -54,7 +54,7 @@ class Character:
         table.add_column("Detail", style="green")
 
         # Add character details to the table
-        table.add_row("Name:", self.name, style="red")
+        table.add_row("Name:", self.name)
         table.add_row("Race:", self.race)
         table.add_row("Class:", self.char_class)
 
