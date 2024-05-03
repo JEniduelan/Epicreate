@@ -11,9 +11,10 @@ https://github.com/JEniduelan/Epicreate
 ---
 ## Introduction
 
-Your application, called "Epicreate," is designed to allow users to create, delete, and view RPG characters. It's a text-based interface where users can interact by selecting options from a menu.
+My application, called "Epicreate," is designed to allow users to create, delete, and view RPG characters. It's a text-based interface where users can interact by selecting options from a menu.
 
 1. Main Menu:
+
 When you start the application, you are greeted with a main menu. Here are the options:
 
  - Create a character (Option 1): Allows you to create a new RPG character. You'll be prompted to enter the character's name, race (Human, Elf, or Dwarf), and class (Warrior, Mage, or Rogue).
@@ -22,6 +23,7 @@ When you start the application, you are greeted with a main menu. Here are the o
  - Exit the application (Option 4): Allows you to exit the application.
 
 2. Creating a Character:
+
  To create a character:
 
  - Choose option 1 from the main menu.
@@ -30,6 +32,7 @@ When you start the application, you are greeted with a main menu. Here are the o
  - The character is automatically saved to a CSV file for future reference.
 
 3. Deleting a Character:
+
  To delete a character:
 
  - Choose option 2 from the main menu.
@@ -39,6 +42,7 @@ When you start the application, you are greeted with a main menu. Here are the o
  - The removed character is deleted from the CSV file.
 
 4. Viewing Characters:
+
  To view all created characters:
 
  - Choose option 3 from the main menu.
@@ -46,17 +50,22 @@ When you start the application, you are greeted with a main menu. Here are the o
  - You can review the information for all characters you've created.
 
 5. Exiting the Application:
+
  To exit the application:
 
  - Choose option 4 from the main menu.
  - You'll see a farewell message indicating that you're exiting the application.
 
-## Additional Notes:
-Your application uses external packages like colored for colored text and rich for emoji and formatting.
-Characters are stored in a CSV file named "characters.csv" for persistence.
-Validation is implemented for race and class inputs to ensure they are within predefined options.
-Error handling is in place for invalid inputs and missing CSV files.
+### Additional Notes:
+
+ - My application uses external packages like colored for colored text and rich for emoji and formatting.
+ - Characters are stored in a CSV file named "characters.csv" for persistence.
+ - Validation is implemented for race and class inputs to ensure they are within predefined options.
+ - Error handling is in place for invalid inputs and missing CSV files.
+
 That's the basic overview of how to play your RPG Character Creation System Application! Enjoy creating and managing your characters! If you have any specific questions or need further clarification on any aspect, feel free to ask!
+
+---
 ## Packages
 
 ## Implementation Plan
