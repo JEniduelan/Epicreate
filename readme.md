@@ -118,6 +118,13 @@ The characters remain stored in the CSV file for future viewing and reference.
 
  It then gracefully terminates the program, ending the execution and returning control to the user.
 
+ ### Additional Notes:
+
+ - My application uses external packages like colored for colored text and rich for emoji and formatting.
+ - Characters are stored in a CSV file named "characters.csv" for persistence.
+ - Validation is implemented for race and class inputs to ensure they are within predefined options.
+ - Error handling is in place for invalid inputs and missing CSV files.
+
  Please refer to # comments in the main.py, new_char.py, csv_function.py for futher explanation of the code with visual representation.
 
 ---
@@ -168,13 +175,6 @@ When you start the application, you are greeted with a main menu. Here are the o
 
  - Choose option 4 from the main menu.
  - You'll see a farewell message indicating that you're exiting the application.
-
-### Additional Notes:
-
- - My application uses external packages like colored for colored text and rich for emoji and formatting.
- - Characters are stored in a CSV file named "characters.csv" for persistence.
- - Validation is implemented for race and class inputs to ensure they are within predefined options.
- - Error handling is in place for invalid inputs and missing CSV files.
 
 That's the basic overview of how to play my RPG Character Creation System Application! Enjoy creating and managing your characters! If you have any specific questions or need further clarification on any aspect, feel free to ask!
 
