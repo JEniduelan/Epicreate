@@ -146,6 +146,23 @@ That's the basic overview of how to play my RPG Character Creation System Applic
 
 ## Implementation Plan
 
+ - I have used trello for my project management board for my implementation plan.
+ 
+ <img width="725" alt="Trello 1" src="https://github.com/JEniduelan/Epicreate/assets/161182890/bec85c12-526d-4a2d-a96d-851d0a599eaa">
+
+ <img width="1418" alt="Trello 2" src="https://github.com/JEniduelan/Epicreate/assets/161182890/22685875-c017-4a43-b51f-3af03bcef7ec">
+
+- Here are some screenshots of each features including how i would do the feature, due dates and checklists.
+
+<img width="470" alt="Trello1" src="https://github.com/JEniduelan/Epicreate/assets/161182890/aa24dc52-9cd7-4778-b3f0-c6ab9f184491">
+
+<img width="470" alt="Trello2" src="https://github.com/JEniduelan/Epicreate/assets/161182890/b3fe876d-8a66-46e6-9056-50153ff2550f">
+
+<img width="470" alt="Trello3" src="https://github.com/JEniduelan/Epicreate/assets/161182890/71501e1e-a38a-471a-b7fe-93e2f307307d">
+
+<img width="471" alt="Trello4" src="https://github.com/JEniduelan/Epicreate/assets/161182890/1b2280da-25e4-4967-afd3-6e8e630660e2">
+
+<img width="471" alt="Trello5" src="https://github.com/JEniduelan/Epicreate/assets/161182890/95bc3c8b-0cd9-4905-9904-59de1e01cbf5">
 
 
 Link to Project Management Site:
@@ -164,6 +181,7 @@ Link to Project Management Site:
  ####  to install the application you need to do as follows:
 
  1. Open you terminal
+
 ![Screenshot1](https://github.com/JEniduelan/Epicreate/assets/161182890/71e483b7-e065-430c-81c5-3ce88cf0152f)
 
  2. Clone my reporistry
