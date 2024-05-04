@@ -165,28 +165,45 @@ Link to Project Management Site:
 
  1. Open you terminal
 ![Screenshot1](https://github.com/JEniduelan/Epicreate/assets/161182890/71e483b7-e065-430c-81c5-3ce88cf0152f)
+
  2. Clone my reporistry
+
 ![Screenshot 2p2](https://github.com/JEniduelan/Epicreate/assets/161182890/f6e0fae6-3363-4acd-9a38-90d5bbe98a29)
 ![Screenshot2](https://github.com/JEniduelan/Epicreate/assets/161182890/be7aefea-5b05-43c6-98b6-adca407ffc09)
+
  3. Once you've cloned it, you need to navigate source directory in the repositry 
+
 ![Screenshot 3](https://github.com/JEniduelan/Epicreate/assets/161182890/28288f00-1f41-44c7-8a91-f6adb477bd57)
+
  4. You will need to add execute permission to the run.sh script
+
 ![screenshot4](https://github.com/JEniduelan/Epicreate/assets/161182890/2e68d2f5-2283-45cd-8488-bb264e23787b)
+
  4. And lastly, run the ./run.sh to start the application. Enjoy!
+
 ![Screenshot 5](https://github.com/JEniduelan/Epicreate/assets/161182890/bea946c2-f9d6-48df-84c0-48c5030ce80b)
+
  #### alternatively
 
  1. you can navigate through my Github repo
  2. click where it says <>Code.
+
 ![Screenshot 7](https://github.com/JEniduelan/Epicreate/assets/161182890/42483132-06cd-453d-aed5-a6d73e138feb)
+
  3. Select "Download ZIP" to download it
  4. once you have downloaded it, open the folder and locate the src folder then open this in VS Code.
  5. Using VS Code, open the terminal externally, not within the VS Code interface.
+
 ![Screenshot 8](https://github.com/JEniduelan/Epicreate/assets/161182890/7b4990bb-ca5d-4a71-99ad-e5f2ef250d2e)
+
  6. Then write the command bellow to execute permission to the script
+
 ![screenshot4](https://github.com/JEniduelan/Epicreate/assets/161182890/2e68d2f5-2283-45cd-8488-bb264e23787b)
+
  7. And simply, run the application by using this command.
+
 ![Screenshot 5](https://github.com/JEniduelan/Epicreate/assets/161182890/bea946c2-f9d6-48df-84c0-48c5030ce80b)
+
  8. Enjoy!
 
 
