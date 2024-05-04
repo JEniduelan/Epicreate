@@ -10,7 +10,7 @@ from csv_function import remove_Char, view_Char
 print(f"\n|============ {Fore.green_4}Welcome{Style.reset} ============|")
 print(f"|====🔥======== {Fore.orange_4a}To{Style.reset} =========🔥====|")
 print(f"|=========== {Fore.blue}Epicreate{Style.reset} ===========|\n")
-print(f"🏰 {Fore.yellow}A RPG Character Creation System Application{Style.reset} 🏰")
+print(f"🏰 {Fore.yellow}RPG Character Creation System Application{Style.reset} 🏰")
 
 while True:
             user_input = input(f"{Fore.light_cyan}\nPress Enter to continue...{Style.reset}")
