@@ -131,50 +131,14 @@ The characters remain stored in the CSV file for future viewing and reference.
 
 ## How to play the app
 
----
 
-### Main Menu
+When you open the app, you'll see the main menu. It's pretty straightforward, offering four options to choose from. If you want to create a character, enter 1 to "Create a character." Just follow the prompts to give your hero a name, race (Human, Elf, or Dwarf), and class (Warrior, Mage, or Rogue). Your character will be ready to go with their stats and abilities.
 
-When you start the application, you are greeted with a main menu. Here are the options:
+If you need to say goodbye to a character you've created, go for the "Delete created character" option. It's a simple process to remove them from your roster.
 
- - Create a character (Option 1): Allows you to create a new RPG character. You'll be prompted to enter the character's name, race (Human, Elf, or Dwarf), and class (Warrior, Mage, or Rogue).
- - Delete created character (Option 2): Lets you remove a character that you previously created. You'll see a list of your characters and can choose which one to delete.
- - View created characters (Option 3): Displays a list of all characters you've created along with their details, such as name, race, class, attributes, and abilities.
- - Exit the application (Option 4): Allows you to exit the application.
+For a quick look at all the characters you've created, choose "View created characters." You'll see their names, races, and classes, so you can admire your handiwork.
 
-### Creating a Character
-
- To create a character:
-
- - Choose option 1 from the main menu.
- - Enter the character's name, race, and class.
- - The application will then display the details of the created character, including their attributes and abilities.
- - The character is automatically saved to a CSV file for future reference.
-
-### Deleting a Character
-
- To delete a character:
-
- - Choose option 2 from the main menu.
- - You'll see a list of your characters with corresponding numbers.
- - Enter the number of the character you want to delete.
- - The selected character will be removed from the list, and the updated list will be displayed.
- - The removed character is deleted from the CSV file.
-
-### Viewing Characters
-
- To view all created characters:
-
- - Choose option 3 from the main menu.
- - The application will display a table with details of each character, including name, race, class, attributes, and abilities.
- - You can review the information for all characters you've created.
-
-### Exiting the Application
-
- To exit the application:
-
- - Choose option 4 from the main menu.
- - You'll see a farewell message indicating that you're exiting the application.
+And when you're ready to call it a day, just select "Exit the application." No big deal, we'll wrap things up smoothly and let you get back to whatever you were doing.
 
 That's the basic overview of how to play my RPG Character Creation System Application! Enjoy creating and managing your characters! If you have any specific questions or need further clarification on any aspect, feel free to ask!
 
@@ -182,7 +146,51 @@ That's the basic overview of how to play my RPG Character Creation System Applic
 
 ## Implementation Plan
 
-## Installation
+
+
+Link to Project Management Site:
+
+ https://trello.com/b/bMkJBBMS/t1a3johnniduealn
+
+## Help Documentation 
+
+### Python
+
+ - If you don't have the most recent version of Python installed, you can download it from the following link:
+ https://www.python.org/downloads/
+
+### Installing The Application
+
+ ####  to install the application you need to do as follows:
+
+ 1. Open you terminal
+![Screenshot1](https://github.com/JEniduelan/Epicreate/assets/161182890/71e483b7-e065-430c-81c5-3ce88cf0152f)
+ 2. Clone my reporistry
+![Screenshot 2p2](https://github.com/JEniduelan/Epicreate/assets/161182890/f6e0fae6-3363-4acd-9a38-90d5bbe98a29)
+![Screenshot2](https://github.com/JEniduelan/Epicreate/assets/161182890/be7aefea-5b05-43c6-98b6-adca407ffc09)
+ 3. Once you've cloned it, you need to navigate source directory in the repositry 
+![Screenshot 3](https://github.com/JEniduelan/Epicreate/assets/161182890/28288f00-1f41-44c7-8a91-f6adb477bd57)
+ 4. You will need to add execute permission to the run.sh script
+![screenshot4](https://github.com/JEniduelan/Epicreate/assets/161182890/2e68d2f5-2283-45cd-8488-bb264e23787b)
+ 4. And lastly, run the ./run.sh to start the application. Enjoy!
+![Screenshot 5](https://github.com/JEniduelan/Epicreate/assets/161182890/bea946c2-f9d6-48df-84c0-48c5030ce80b)
+ #### alternatively
+
+ 1. you can navigate through my Github repo
+ 2. click where it says <>Code.
+![Screenshot 7](https://github.com/JEniduelan/Epicreate/assets/161182890/42483132-06cd-453d-aed5-a6d73e138feb)
+ 3. Select "Download ZIP" to download it
+ 4. once you have downloaded it, open the folder and locate the src folder then open this in VS Code.
+ 5. Using VS Code, open the terminal externally, not within the VS Code interface.
+![Screenshot 8](https://github.com/JEniduelan/Epicreate/assets/161182890/7b4990bb-ca5d-4a71-99ad-e5f2ef250d2e)
+ 6. Then write the command bellow to execute permission to the script
+![screenshot4](https://github.com/JEniduelan/Epicreate/assets/161182890/2e68d2f5-2283-45cd-8488-bb264e23787b)
+ 7. And simply, run the application by using this command.
+![Screenshot 5](https://github.com/JEniduelan/Epicreate/assets/161182890/bea946c2-f9d6-48df-84c0-48c5030ce80b)
+ 8. Enjoy!
+
+
+ 
 
 
 
