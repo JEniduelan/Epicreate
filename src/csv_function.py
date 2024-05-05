@@ -1,9 +1,9 @@
-
-# App functions
+# System Packages
 import csv
 import os.path
 import ast
 
+# External Packages
 from colored import Fore, Back, Style
 from rich.console import Console
 from rich.table import Table

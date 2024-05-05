@@ -1,6 +1,6 @@
+# External Packages
 from colored import Fore, Back, Style
 from rich import emoji
-
 from rich.console import Console
 from rich.table import Table
 
